@@ -1,4 +1,15 @@
 module.exports = [
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: '*',
+      expose: ['WWW-Authenticate', 'Server-Authorization'],
+      maxAge: 31536000,
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: ['*'],
+    },
+  },
   'strapi::errors',
   {
     name: 'strapi::security',
@@ -14,17 +25,6 @@ module.exports = [
       },
     },
   },
-  {
-    name: 'strapi::cors',
-    config: {
-      origin: '*',
-      expose: ['WWW-Authenticate', 'Server-Authorization'],
-      maxAge: 31536000,
-      credentials: true,
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['Content-Type', 'Authorization', 'X-Requested-With'],
-    },
-  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
@@ -33,4 +33,5 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
 
