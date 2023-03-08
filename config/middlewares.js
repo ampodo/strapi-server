@@ -14,7 +14,17 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: '*',
+      expose: ['WWW-Authenticate', 'Server-Authorization'],
+      maxAge: 31536000,
+      credentials: true,
+      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    },
+  },
   'strapi::poweredBy',
   'strapi::logger',
   'strapi::query',
@@ -22,19 +32,5 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  function() {
-    // additional custom middleware here
-  },
-  {
-    settings: {
-      cors: {
-        enabled: true,
-        origin: ['https://server-side-3aru.onrender.com'],
-        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-        headers: ['Content-Type', 'Authorization'],
-        expose: ['WWW-Authenticate', 'Server-Authorization'],
-      },
-    },
-  },
 ];
 
