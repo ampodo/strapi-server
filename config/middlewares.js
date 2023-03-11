@@ -2,10 +2,17 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-         enabled: true,
-         headers: '*',
-         expose: ['WWW-Authenticate', 'Server-Authorization'],
-         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+      enabled: true,
+       origin: ["https://server-side-3aru.onrender.com"],
+      expose: ["WWW-Authenticate", "Server-Authorization"],
+      credentials: true,
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+      headers: [
+        "Content-Type",
+        "Authorization",
+        "X-Frame-Options",
+        "access-control-allow-origin",
+      ],
     },
   },
   'strapi::errors',
