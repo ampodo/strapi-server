@@ -2,12 +2,10 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: '*',
-      expose: ['WWW-Authenticate', 'Server-Authorization'],
-      maxAge: 31536000,
-      credentials: true,
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
-      headers: ['*'],
+         enabled: true,
+         headers: '*',
+         expose: ['WWW-Authenticate', 'Server-Authorization'],
+         methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
     },
   },
   'strapi::errors',
