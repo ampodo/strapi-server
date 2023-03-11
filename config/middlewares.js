@@ -13,6 +13,8 @@ module.exports = [
         "X-Frame-Options",
         "access-control-allow-origin",
       ],
+       // Check middlewares accessibility
+      onInit: () => console.log('Strapi CORS middleware initialized'), 
     },
   },
   'strapi::errors',
