@@ -3,7 +3,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-       origin: ["https://server-side-3aru.onrender.com"],
+      origin: ["https://server-side-3aru.onrender.com", "http://localhost:3000"],
       expose: ["WWW-Authenticate", "Server-Authorization"],
       credentials: true,
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
@@ -11,7 +11,7 @@ module.exports = [
         "Content-Type",
         "Authorization",
         "X-Frame-Options",
-        "access-control-allow-origin",
+        "Access-Control-Allow-Origin",
       ],
        // Check middlewares accessibility
       onInit: () => console.log('Strapi CORS middleware initialized'), 
