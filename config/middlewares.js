@@ -3,7 +3,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ["https://server-side-3aru.onrender.com", "http://localhost:3000"],
+      origin: ["https://server-side-3aru.onrender.com", "https://e-shop-uxvp.onrender.com"],
       expose: ["WWW-Authenticate", "Server-Authorization"],
       credentials: true,
       methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
