@@ -1,3 +1,6 @@
+
+const cacheControl = require('koa-cache-control');
+
 module.exports = [
   {
     name: 'strapi::cors',
@@ -39,6 +42,11 @@ module.exports = [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  cacheControl({
+    maxAge: 3600, // cache for 1 hour
+    public: true, // allow caching by public caches (e.g. CDNs)
+  }),
 ];
+
 
 

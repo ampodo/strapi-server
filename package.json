@@ -16,6 +16,7 @@
     "@strapi/strapi": "4.7.1",
     "cloudinary": "^1.35.0",
     "cors": "^2.8.5",
+    "koa-cache-control": "^2.0.0",
     "pg": "8.8.0"
   },
   "author": {
