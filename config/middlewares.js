@@ -1,6 +1,5 @@
 
-
-export default [
+module.exports = [
   {
     name: 'strapi::cors',
     config: {
@@ -41,7 +40,6 @@ export default [
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
-  
 ];
 
 
