@@ -10,4 +10,15 @@ module.exports = ({ env }) => ({
   server: {
     autoReload: false,
   },
+  middleware: {
+    cache: {
+      enabled: true,
+      expose: {
+        enabled: true,
+        headers: {
+          'cache-control': 'public, max-age=2592000, immutable',
+        },
+      },
+    },
+  },
 });
