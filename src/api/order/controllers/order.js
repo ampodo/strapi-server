@@ -1,4 +1,3 @@
-
 ("use strict");
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 /**
@@ -19,7 +18,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
 
           return {
             price_data: {
-              currency: "eur",
+              currency: "inr",
               product_data: {
                 name: item.title,
               },
@@ -31,7 +30,7 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
       );
 
       const session = await stripe.checkout.sessions.create({
-        shipping_address_collection: { allowed_countries: ["EE"] },
+        shipping_address_collection: { allowed_countries: ["IN"] },
         payment_method_types: ["card"],
         mode: "payment",
         success_url: process.env.CLIENT_URL + "/success",
