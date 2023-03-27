@@ -7,7 +7,7 @@ module.exports = [
       origin: ["https://server-side-3aru.onrender.com", "https://e-shop-uxvp.onrender.com"],
       expose: ["WWW-Authenticate", "Server-Authorization"],
       credentials: true,
-      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
+      methods: ["GET", "POST", "PUT", "DELETE", "CREATE", "OPTIONS", "PATCH"],
       headers: [
         "Content-Type",
         "Authorization",
