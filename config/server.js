@@ -21,7 +21,4 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  stripe: {
-    apiKey: env('STRIPE_KEY'),
-  },
 });
