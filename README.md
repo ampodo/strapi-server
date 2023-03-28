@@ -1,3 +1,3 @@
 
-Strapi server for shop
+Strapi server for shop project
 
