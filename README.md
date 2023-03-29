@@ -1,2 +1,2 @@
 
-Strapi server for shop project with api keys.
+Strapi server for shop project with new secret key.
