@@ -1,4 +1,4 @@
 
-node_modules reinstalled
+config with stripe set up
 
 

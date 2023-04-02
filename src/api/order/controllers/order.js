@@ -37,14 +37,14 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         cancel_url: process.env.CLIENT_URL + "?success=false",
         line_items: lineItems,
       });
-
+      
       await strapi
         .service("api::order.order")
         .create({ data: { products, stripeId: session.id } });
 
       return { stripeSession: session };
-    } catch (error) {
-      console.error(error);
+    } catch  {
+      
       ctx.response.status = 500;
       return { error: error.message };
     }
